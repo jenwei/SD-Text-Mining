@@ -1,0 +1,16 @@
+﻿Homework Five: Text Mining
+
+Data Source 5: Facebook
+
+Use data from Facebook to pull feeds of friends
+Characterize Word Frequencies
+Compute Summary Statistics
+Find Text Similarity
+Visualize Text (Using MDS)
+
+To-Do:
+Set up Git Repo
+Complete Preliminaries 
+Set up Facebook Data-Grabbing Code
+Pickle Facebook Data
+Implement Functions Listed Above
