@@ -18,7 +18,7 @@ print me
 counter = 0
 my_friends = f.search(me[0], type=FRIENDS, count=10000)
 for friend in my_friends:
-    friend_news = f.search(friend.id, type=NEWS, count=100000)
+    friend_news = f.search(friend.id, type=NEWS, count=100)
     for news in friend_news:
         counter += 1
         print news.text
