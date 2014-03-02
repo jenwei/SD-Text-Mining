@@ -16,13 +16,31 @@ f = Facebook(license='CAAEuAis8fUgBANEcpy6pnuIwr8IZBLFo3MT7N2m2xbgkecbZCps2CTbm3
 me = f.profile()
 print me
 counter = 0
-my_friends = f.search(me[0], type=FRIENDS, count=10000)
-for friend in my_friends:
-    friend_news = f.search(friend.id, type=NEWS, count=100)
+my_friends = f.search(me[0], type=FRIENDS, count=100)
+
+def access_newsfeed(frnd):
+    """
+    WRITE A DOCSTRING HERE
+    """
+    friend_news = f.search(frnd.id, type=NEWS, count=100)
     for news in friend_news:
-        counter += 1
         print news.text
-        print news.author
+        print type(news.author)
         print news.date
-        print counter
-            
+
+for friend in my_friends:
+    temp_name = friend.author[1]
+    #print friend.author[1] #Prints the name of the author of the post
+    
+    if (temp_name == "Tim Mouton"):
+        access_newsfeed(friend)
+    
+    #print friend_news
+    #for news in friend_news:
+    #    counter += 1
+    #    print news.text
+    #    print news.author[1]
+    #    print type(news.author)
+    #    print news.date
+    #    print counter
+    
