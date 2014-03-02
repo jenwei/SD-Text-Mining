@@ -14,3 +14,4 @@ X	Complete Preliminaries
 X	Set up Facebook Data-Grabbing Code
 	Pickle Facebook Data
 	Implement Functions Listed Above
+	Include Docstrings for ALL Functions
