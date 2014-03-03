@@ -3,15 +3,22 @@
 Data Source 5: Facebook
 
 X	Use data from Facebook to pull feeds of friends
-	Characterize Word Frequencies
-	Compute Summary Statistics
-	Find Text Similarity
-	Visualize Text (Using MDS)
+X	Characterize Word Frequencies
+X	Find Text Similarity
+	
 
 To-Do:
 X	Set up Git Repo
 X	Complete Preliminaries 
-X	Set up Facebook Data-Grabbing Code
-	Pickle Facebook Data
-	Implement Functions Listed Above
-	Include Docstrings for ALL Functions
+X	Set up Facebook Data-Grabbing Code	
+X	Implement Functions Listed Above
+X	Include Docstrings for ALL Functions
+
+
+NOTES:
+
+Normalize the wordCounts to get Frequencies
+Dot product to get similarity
+
+
+PROJECT COMPLETED!
