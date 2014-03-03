@@ -42,6 +42,24 @@ def access_newsfeed(frnd):
     textDict[frnd.author[1]] = textList
     return textDict[frnd.author[1]]
     
+    
+def cleanup(friend_name,posts):
+    """
+    Takes the list of posts taken directly from Facebook and removes all 
+    automatic Facebook posts like "BLANK and BLANK are now friends."
+    
+    posts: list of newsfeed text
+    friend_name = name of newsfeed owner
+    
+    returns: modPosts = modified list of newsfeed text
+    """
+    
+    for post in posts:
+        print type(post)
+        if not(str(post).contains(friend_name)):
+            modPosts.append(post)
+    return modPosts
+    
 
 def facebook_pull(specific_friend):
     """
@@ -56,8 +74,9 @@ def facebook_pull(specific_friend):
         #print friend.author[1] #Prints the name of the author of the post
         
         if (temp_name == specific_friend):
-            individual_textDict = access_newsfeed(friend)
-            return individual_textDict
+            roughDict = access_newsfeed(friend)
+            cleanTextDict = cleanup(specific_friend, roughDict)
+            return cleanTextDict
         #print friend_news
         #for news in friend_news:
         #    counter += 1
